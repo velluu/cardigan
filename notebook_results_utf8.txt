@@ -1,0 +1,306 @@
+﻿
+============================================================
+CELL 2 (index 2)
+============================================================
+c:\Users\karth\miniconda3\Lib\site-packages\tqdm\auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from .autonotebook import tqdm as notebook_tqdm
+PyTorch: 2.6.0+cu124
+CUDA available: True
+GPU: NVIDIA GeForce RTX 4060 Laptop GPU
+
+============================================================
+CELL 3 (index 4)
+============================================================
+Device: cuda
+Data root exists: True
+
+============================================================
+CELL 5 (index 6)
+============================================================
+Training samples: 50
+Test samples:     10
+
+First entry: {
+  "id": "train_001",
+  "source_id": "10828675_15",
+  "image": "reference/sats/train_001.tiff",
+  "map": "reference/maps/train_001_map.tiff",
+  "ideal_solution": "reference/solutions/train_001_solution.json",
+  "image_size": [
+    1500,
+    1500
+  ],
+  "start": [
+    527,
+    914
+  ],
+  "goal": [
+    300,
+    1497
+  ]
+}
+
+train_001 start (x=527, y=914)
+mask[y=914, x=527] = True
+Coordinate sanity check PASSED
+
+============================================================
+CELL 6 (index 7)
+============================================================
+Image shape: (1500, 1500, 3)  dtype: uint8
+Mask  shape: (1500, 1500)  road%: 3.5%
+Solution: 591 points, length: 799 px
+
+============================================================
+CELL 8 (index 10)
+============================================================
+Train: 320 patches  (40 imgs x 8)
+Val:   40 patches  (10 imgs x 4)
+
+============================================================
+CELL 9 (index 11)
+============================================================
+Parameters: 24,436,369
+
+============================================================
+CELL 10 (index 12)
+============================================================
+Epoch 01/30  train=0.6984  val=0.6458  IoU=0.1357  15.3s  *saved*
+Epoch 02/30  train=0.5600  val=0.5605  IoU=0.2609  13.8s  *saved*
+Epoch 03/30  train=0.4731  val=0.4619  IoU=0.3332  13.3s  *saved*
+Epoch 04/30  train=0.4337  val=0.4495  IoU=0.2945  13.3s
+Epoch 05/30  train=0.4020  val=0.4235  IoU=0.3309  13.2s
+Epoch 06/30  train=0.3771  val=0.4018  IoU=0.3408  13.2s  *saved*
+Epoch 07/30  train=0.3519  val=0.4088  IoU=0.2997  13.0s
+Epoch 08/30  train=0.3349  val=0.3875  IoU=0.3482  13.2s  *saved*
+Epoch 09/30  train=0.3221  val=0.3703  IoU=0.4146  14.4s  *saved*
+Epoch 10/30  train=0.3042  val=0.3758  IoU=0.3610  14.4s
+Epoch 11/30  train=0.2977  val=0.3651  IoU=0.3589  13.9s
+Epoch 12/30  train=0.2774  val=0.3670  IoU=0.3213  13.4s
+Epoch 13/30  train=0.2624  val=0.3205  IoU=0.4344  13.2s  *saved*
+Epoch 14/30  train=0.2623  val=0.3269  IoU=0.3627  13.2s
+Epoch 15/30  train=0.2472  val=0.3178  IoU=0.3732  13.2s
+Epoch 16/30  train=0.2410  val=0.3162  IoU=0.3910  13.2s
+Epoch 17/30  train=0.2354  val=0.3208  IoU=0.3953  13.2s
+Epoch 18/30  train=0.2315  val=0.3045  IoU=0.4041  13.1s
+Epoch 19/30  train=0.2273  val=0.2907  IoU=0.4272  13.1s
+Epoch 20/30  train=0.2206  val=0.2983  IoU=0.4573  13.1s  *saved*
+Epoch 21/30  train=0.2213  val=0.3123  IoU=0.3499  13.1s
+Epoch 22/30  train=0.2150  val=0.3058  IoU=0.4134  13.1s
+Epoch 23/30  train=0.2104  val=0.3017  IoU=0.3905  13.1s
+Epoch 24/30  train=0.2079  val=0.2981  IoU=0.3948  13.2s
+Epoch 25/30  train=0.2083  val=0.3022  IoU=0.3703  13.2s
+Epoch 26/30  train=0.2060  val=0.2856  IoU=0.4366  13.2s
+Epoch 27/30  train=0.2054  val=0.2742  IoU=0.4746  13.1s  *saved*
+Epoch 28/30  train=0.2111  val=0.3117  IoU=0.4009  14.1s
+Epoch 29/30  train=0.2055  val=0.3006  IoU=0.3968  14.0s
+Epoch 30/30  train=0.2134  val=0.3299  IoU=0.3426  13.9s
+
+Best val IoU: 0.4746
+
+============================================================
+CELL 11 (index 13)
+============================================================
+
+============================================================
+CELL 12 (index 14)
+============================================================
+Loaded best model weights
+
+============================================================
+CELL 13 (index 15)
+============================================================
+Inference on train_001 ...
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:35: FutureWarning: `binary_closing` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.closing` instead.
+  mask = binary_closing(mask, disk(3))
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:36: FutureWarning: Parameter `min_size` is deprecated since version 0.26.0 and will be removed in 2.0.0 (or later). To avoid this warning, please use the parameter `max_size` instead. For more details, see the documentation of `remove_small_objects`. Note that the new threshold removes objects smaller than **or equal to** its value, while the previous parameter only removed smaller ones.
+  mask = remove_small_objects(mask, min_size=100)
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:37: FutureWarning: `binary_opening` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.opening` instead.
+  mask = binary_opening(mask, disk(2))
+Time: 0.6s
+Full-image IoU vs GT: 0.6577
+
+============================================================
+CELL 16 (index 19)
+============================================================
+Pathfinding on ground-truth masks
+
+ID             GT Len  Pred Len    Diff  ViolPt  ViolSeg   Time
+--------------------------------------------------------------
+train_001         799       810     +11       0        0   0.1s
+train_002        3651      3677     +26       0        0   0.2s
+train_003        1128      1152     +24       0        0   0.1s
+train_004         456       459      +3       0        0   0.1s
+train_005        1609      1627     +18       0        0   0.2s
+
+============================================================
+CELL 17 (index 20)
+============================================================
+
+============================================================
+CELL 18 (index 22)
+============================================================
+Full pipeline validation (train_041 û train_050)
+
+ID            SegIoU   GT Len  PredLen    Diff  ViolPt  ViolSeg   Time
+---------------------------------------------------------------------------
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:35: FutureWarning: `binary_closing` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.closing` instead.
+  mask = binary_closing(mask, disk(3))
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:36: FutureWarning: Parameter `min_size` is deprecated since version 0.26.0 and will be removed in 2.0.0 (or later). To avoid this warning, please use the parameter `max_size` instead. For more details, see the documentation of `remove_small_objects`. Note that the new threshold removes objects smaller than **or equal to** its value, while the previous parameter only removed smaller ones.
+  mask = remove_small_objects(mask, min_size=100)
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:37: FutureWarning: `binary_opening` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.opening` instead.
+  mask = binary_opening(mask, disk(2))
+train_041     0.5979      535      538      +3       4        7   1.1s
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:35: FutureWarning: `binary_closing` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.closing` instead.
+  mask = binary_closing(mask, disk(3))
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:36: FutureWarning: Parameter `min_size` is deprecated since version 0.26.0 and will be removed in 2.0.0 (or later). To avoid this warning, please use the parameter `max_size` instead. For more details, see the documentation of `remove_small_objects`. Note that the new threshold removes objects smaller than **or equal to** its value, while the previous parameter only removed smaller ones.
+  mask = remove_small_objects(mask, min_size=100)
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:37: FutureWarning: `binary_opening` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.opening` instead.
+  mask = binary_opening(mask, disk(2))
+train_042     0.2326     1286     2938   +1652     421      437   1.2s
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:35: FutureWarning: `binary_closing` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.closing` instead.
+  mask = binary_closing(mask, disk(3))
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:36: FutureWarning: Parameter `min_size` is deprecated since version 0.26.0 and will be removed in 2.0.0 (or later). To avoid this warning, please use the parameter `max_size` instead. For more details, see the documentation of `remove_small_objects`. Note that the new threshold removes objects smaller than **or equal to** its value, while the previous parameter only removed smaller ones.
+  mask = remove_small_objects(mask, min_size=100)
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:37: FutureWarning: `binary_opening` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.opening` instead.
+  mask = binary_opening(mask, disk(2))
+train_043     0.6584      970      978      +8       9       10   1.0s
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:35: FutureWarning: `binary_closing` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.closing` instead.
+  mask = binary_closing(mask, disk(3))
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:36: FutureWarning: Parameter `min_size` is deprecated since version 0.26.0 and will be removed in 2.0.0 (or later). To avoid this warning, please use the parameter `max_size` instead. For more details, see the documentation of `remove_small_objects`. Note that the new threshold removes objects smaller than **or equal to** its value, while the previous parameter only removed smaller ones.
+  mask = remove_small_objects(mask, min_size=100)
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:37: FutureWarning: `binary_opening` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.opening` instead.
+  mask = binary_opening(mask, disk(2))
+train_044     0.3448      718      726      +8       0        0   0.9s
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:35: FutureWarning: `binary_closing` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.closing` instead.
+  mask = binary_closing(mask, disk(3))
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:36: FutureWarning: Parameter `min_size` is deprecated since version 0.26.0 and will be removed in 2.0.0 (or later). To avoid this warning, please use the parameter `max_size` instead. For more details, see the documentation of `remove_small_objects`. Note that the new threshold removes objects smaller than **or equal to** its value, while the previous parameter only removed smaller ones.
+  mask = remove_small_objects(mask, min_size=100)
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:37: FutureWarning: `binary_opening` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.opening` instead.
+  mask = binary_opening(mask, disk(2))
+train_045     0.6546     1150     1165     +15       6       10   0.9s
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:35: FutureWarning: `binary_closing` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.closing` instead.
+  mask = binary_closing(mask, disk(3))
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:36: FutureWarning: Parameter `min_size` is deprecated since version 0.26.0 and will be removed in 2.0.0 (or later). To avoid this warning, please use the parameter `max_size` instead. For more details, see the documentation of `remove_small_objects`. Note that the new threshold removes objects smaller than **or equal to** its value, while the previous parameter only removed smaller ones.
+  mask = remove_small_objects(mask, min_size=100)
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:37: FutureWarning: `binary_opening` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.opening` instead.
+  mask = binary_opening(mask, disk(2))
+train_046     0.6078      819      846     +27     141      151   0.9s
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:35: FutureWarning: `binary_closing` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.closing` instead.
+  mask = binary_closing(mask, disk(3))
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:36: FutureWarning: Parameter `min_size` is deprecated since version 0.26.0 and will be removed in 2.0.0 (or later). To avoid this warning, please use the parameter `max_size` instead. For more details, see the documentation of `remove_small_objects`. Note that the new threshold removes objects smaller than **or equal to** its value, while the previous parameter only removed smaller ones.
+  mask = remove_small_objects(mask, min_size=100)
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:37: FutureWarning: `binary_opening` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.opening` instead.
+  mask = binary_opening(mask, disk(2))
+train_047     0.0427     1004      863    -141     617      625   1.4s
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:35: FutureWarning: `binary_closing` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.closing` instead.
+  mask = binary_closing(mask, disk(3))
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:36: FutureWarning: Parameter `min_size` is deprecated since version 0.26.0 and will be removed in 2.0.0 (or later). To avoid this warning, please use the parameter `max_size` instead. For more details, see the documentation of `remove_small_objects`. Note that the new threshold removes objects smaller than **or equal to** its value, while the previous parameter only removed smaller ones.
+  mask = remove_small_objects(mask, min_size=100)
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:37: FutureWarning: `binary_opening` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.opening` instead.
+  mask = binary_opening(mask, disk(2))
+train_048     0.5911     2079     2114     +34     163      200   0.9s
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:35: FutureWarning: `binary_closing` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.closing` instead.
+  mask = binary_closing(mask, disk(3))
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:36: FutureWarning: Parameter `min_size` is deprecated since version 0.26.0 and will be removed in 2.0.0 (or later). To avoid this warning, please use the parameter `max_size` instead. For more details, see the documentation of `remove_small_objects`. Note that the new threshold removes objects smaller than **or equal to** its value, while the previous parameter only removed smaller ones.
+  mask = remove_small_objects(mask, min_size=100)
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:37: FutureWarning: `binary_opening` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.opening` instead.
+  mask = binary_opening(mask, disk(2))
+train_049     0.5113     1081     2893   +1813     170      184   1.2s
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:35: FutureWarning: `binary_closing` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.closing` instead.
+  mask = binary_closing(mask, disk(3))
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:36: FutureWarning: Parameter `min_size` is deprecated since version 0.26.0 and will be removed in 2.0.0 (or later). To avoid this warning, please use the parameter `max_size` instead. For more details, see the documentation of `remove_small_objects`. Note that the new threshold removes objects smaller than **or equal to** its value, while the previous parameter only removed smaller ones.
+  mask = remove_small_objects(mask, min_size=100)
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:37: FutureWarning: `binary_opening` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.opening` instead.
+  mask = binary_opening(mask, disk(2))
+train_050     0.4274     1788     1276    -512     311      315   0.9s
+---------------------------------------------------------------------------
+AVERAGE       0.4669                      +291   184.2    193.9
+
+============================================================
+CELL 19 (index 23)
+============================================================
+Predicting masks for test images ...
+
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:35: FutureWarning: `binary_closing` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.closing` instead.
+  mask = binary_closing(mask, disk(3))
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:36: FutureWarning: Parameter `min_size` is deprecated since version 0.26.0 and will be removed in 2.0.0 (or later). To avoid this warning, please use the parameter `max_size` instead. For more details, see the documentation of `remove_small_objects`. Note that the new threshold removes objects smaller than **or equal to** its value, while the previous parameter only removed smaller ones.
+  mask = remove_small_objects(mask, min_size=100)
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:37: FutureWarning: `binary_opening` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.opening` instead.
+  mask = binary_opening(mask, disk(2))
+test_001: 5.3% road, 0.5s
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:35: FutureWarning: `binary_closing` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.closing` instead.
+  mask = binary_closing(mask, disk(3))
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:36: FutureWarning: Parameter `min_size` is deprecated since version 0.26.0 and will be removed in 2.0.0 (or later). To avoid this warning, please use the parameter `max_size` instead. For more details, see the documentation of `remove_small_objects`. Note that the new threshold removes objects smaller than **or equal to** its value, while the previous parameter only removed smaller ones.
+  mask = remove_small_objects(mask, min_size=100)
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:37: FutureWarning: `binary_opening` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.opening` instead.
+  mask = binary_opening(mask, disk(2))
+test_002: 0.0% road, 0.5s
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:35: FutureWarning: `binary_closing` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.closing` instead.
+  mask = binary_closing(mask, disk(3))
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:36: FutureWarning: Parameter `min_size` is deprecated since version 0.26.0 and will be removed in 2.0.0 (or later). To avoid this warning, please use the parameter `max_size` instead. For more details, see the documentation of `remove_small_objects`. Note that the new threshold removes objects smaller than **or equal to** its value, while the previous parameter only removed smaller ones.
+  mask = remove_small_objects(mask, min_size=100)
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:37: FutureWarning: `binary_opening` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.opening` instead.
+  mask = binary_opening(mask, disk(2))
+test_003: 0.1% road, 0.4s
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:35: FutureWarning: `binary_closing` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.closing` instead.
+  mask = binary_closing(mask, disk(3))
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:36: FutureWarning: Parameter `min_size` is deprecated since version 0.26.0 and will be removed in 2.0.0 (or later). To avoid this warning, please use the parameter `max_size` instead. For more details, see the documentation of `remove_small_objects`. Note that the new threshold removes objects smaller than **or equal to** its value, while the previous parameter only removed smaller ones.
+  mask = remove_small_objects(mask, min_size=100)
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:37: FutureWarning: `binary_opening` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.opening` instead.
+  mask = binary_opening(mask, disk(2))
+test_004: 6.9% road, 0.3s
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:35: FutureWarning: `binary_closing` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.closing` instead.
+  mask = binary_closing(mask, disk(3))
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:36: FutureWarning: Parameter `min_size` is deprecated since version 0.26.0 and will be removed in 2.0.0 (or later). To avoid this warning, please use the parameter `max_size` instead. For more details, see the documentation of `remove_small_objects`. Note that the new threshold removes objects smaller than **or equal to** its value, while the previous parameter only removed smaller ones.
+  mask = remove_small_objects(mask, min_size=100)
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:37: FutureWarning: `binary_opening` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.opening` instead.
+  mask = binary_opening(mask, disk(2))
+test_005: 4.9% road, 0.3s
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:35: FutureWarning: `binary_closing` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.closing` instead.
+  mask = binary_closing(mask, disk(3))
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:36: FutureWarning: Parameter `min_size` is deprecated since version 0.26.0 and will be removed in 2.0.0 (or later). To avoid this warning, please use the parameter `max_size` instead. For more details, see the documentation of `remove_small_objects`. Note that the new threshold removes objects smaller than **or equal to** its value, while the previous parameter only removed smaller ones.
+  mask = remove_small_objects(mask, min_size=100)
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:37: FutureWarning: `binary_opening` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.opening` instead.
+  mask = binary_opening(mask, disk(2))
+test_006: 1.6% road, 0.3s
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:35: FutureWarning: `binary_closing` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.closing` instead.
+  mask = binary_closing(mask, disk(3))
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:36: FutureWarning: Parameter `min_size` is deprecated since version 0.26.0 and will be removed in 2.0.0 (or later). To avoid this warning, please use the parameter `max_size` instead. For more details, see the documentation of `remove_small_objects`. Note that the new threshold removes objects smaller than **or equal to** its value, while the previous parameter only removed smaller ones.
+  mask = remove_small_objects(mask, min_size=100)
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:37: FutureWarning: `binary_opening` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.opening` instead.
+  mask = binary_opening(mask, disk(2))
+test_007: 1.3% road, 0.3s
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:35: FutureWarning: `binary_closing` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.closing` instead.
+  mask = binary_closing(mask, disk(3))
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:36: FutureWarning: Parameter `min_size` is deprecated since version 0.26.0 and will be removed in 2.0.0 (or later). To avoid this warning, please use the parameter `max_size` instead. For more details, see the documentation of `remove_small_objects`. Note that the new threshold removes objects smaller than **or equal to** its value, while the previous parameter only removed smaller ones.
+  mask = remove_small_objects(mask, min_size=100)
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:37: FutureWarning: `binary_opening` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.opening` instead.
+  mask = binary_opening(mask, disk(2))
+test_008: 1.4% road, 0.3s
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:35: FutureWarning: `binary_closing` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.closing` instead.
+  mask = binary_closing(mask, disk(3))
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:36: FutureWarning: Parameter `min_size` is deprecated since version 0.26.0 and will be removed in 2.0.0 (or later). To avoid this warning, please use the parameter `max_size` instead. For more details, see the documentation of `remove_small_objects`. Note that the new threshold removes objects smaller than **or equal to** its value, while the previous parameter only removed smaller ones.
+  mask = remove_small_objects(mask, min_size=100)
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:37: FutureWarning: `binary_opening` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.opening` instead.
+  mask = binary_opening(mask, disk(2))
+test_009: 0.3% road, 0.3s
+test_010: 1.5% road, 0.3s
+
+All 10 test masks ready.
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:35: FutureWarning: `binary_closing` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.closing` instead.
+  mask = binary_closing(mask, disk(3))
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:36: FutureWarning: Parameter `min_size` is deprecated since version 0.26.0 and will be removed in 2.0.0 (or later). To avoid this warning, please use the parameter `max_size` instead. For more details, see the documentation of `remove_small_objects`. Note that the new threshold removes objects smaller than **or equal to** its value, while the previous parameter only removed smaller ones.
+  mask = remove_small_objects(mask, min_size=100)
+C:\Users\karth\AppData\Local\Temp\ipykernel_26356\684114703.py:37: FutureWarning: `binary_opening` is deprecated since version 0.26 and will be removed in version 0.28. Use `skimage.morphology.opening` instead.
+  mask = binary_opening(mask, disk(2))
+
+============================================================
+CELL 20 (index 24)
+============================================================
+
+============================================================
+CELL 21 (index 25)
+============================================================
+Submission generator ready.
+When test start/goal coords are released, load updated metadata and call generate_submission().
