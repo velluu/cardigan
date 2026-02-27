@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for f in \"C:\\\\Users\\\\karth\\\\OneDrive\\\\Desktop\\\\CODE\\\\cardigan/ump_data/reference/solutions\"/train_*.json)",
+      "Bash(do wc -l \"$f\")",
+      "Bash(do basename \"$f\")",
+      "Bash(done)",
+      "Bash(ls -lh \"C:\\\\Users\\\\karth\\\\OneDrive\\\\Desktop\\\\CODE\\\\cardigan/ump_data/reference/solutions/train_{001,002,008,025,050}_solution.json\")",
+      "Bash(python3:*)",
+      "Bash(grep:*)",
+      "Bash(python:*)"
+    ]
+  }
+}
